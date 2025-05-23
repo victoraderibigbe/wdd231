@@ -1,0 +1,64 @@
+@media screen and (min-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 5px 0;
+  }
+
+  header {
+    padding: 0.8rem;
+    font-size: 2rem;
+    justify-content: center;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 1rem 2rem;
+  }
+
+  .section-container .course {
+    grid-column: 1/3;
+  }
+
+  .section-container .location {
+    grid-column: 3/4;
+  }
+
+  .section-container .certificates {
+    grid-column: 1/4;
+  }
+
+  header img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .certificates nav {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .certificates nav button {
+    max-width: 8rem;
+  }
+
+  .certificates .section-body .courseCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}

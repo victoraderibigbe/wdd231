@@ -1,0 +1,246 @@
+:root {
+  --primary-color: #004a6b;
+  --secondary-color: #5c8b39;
+  --accent1-color: #ff7f41;
+  --accent2-color: #f4f4f2;
+  --dark-color: #333333;
+
+  --heading-font: "Merriweather", serif;
+  --paragraph-font: "Lato", Sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--paragraph-font);
+  max-width: 1600px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--accent1-color);
+  padding: 1px 0;
+}
+
+p,
+a {
+  font-size: 1rem;
+}
+
+p {
+  margin: 1rem auto;
+  line-height: 1.2rem;
+  color: var(--dark-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+figure {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+button {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+/* Header and nav */
+
+header {
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: var(--accent1-color);
+  font-family: var(--heading-font);
+}
+
+header img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+}
+
+#menu {
+  font-size: 1.5rem;
+  border: 0;
+  background: none;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "X";
+}
+
+.navigation {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--dark-color);
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.navigation a {
+  color: var(--accent2-color);
+  transition: color 0.2s ease;
+}
+
+.navigation a:hover {
+  color: var(--accent1-color);
+}
+
+.open {
+  display: flex;
+}
+
+/* Main content */
+
+main {
+  padding: 1rem;
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.section-container section {
+  grid-column: 1/4;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.section-container .section-body {
+  padding: 1rem 2rem;
+}
+
+.section-container section h2 {
+  background-color: var(--primary-color);
+  padding: 0.8rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.certificates nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.certificates nav button {
+  background-color: var(--dark-color);
+  color: var(--accent2-color);
+  max-width: 6rem;
+  width: 100%;
+}
+
+.certificates nav button:hover {
+  color: var(--accent1-color);
+}
+
+.certificates .section-body p {
+  text-align: center;
+}
+
+.certificates .section-body button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem auto;
+  height: 3rem;
+}
+
+button.complete {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+button.complete::before {
+  content: "✔️";
+  margin-right: 0.2rem;
+  font-size: 1rem;
+}
+
+button.complete:hover {
+  color: var(--accent1-color);
+}
+
+button.incomplete {
+  background-color: var(--secondary-color);
+  color: var(--accent2-color);
+}
+
+button.incomplete:hover {
+  color: var(--primary-color);
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+footer p {
+  margin: 0.5rem auto;
+  line-height: 1.5rem;
+}
+
+footer p:first-child {
+  color: var(--accent2-color);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .country-with-flag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+footer p:last-child {
+  color: var(--accent1-color);
+}
