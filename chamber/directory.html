@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 | Chamber of Commerce Directory</title>
+    <title>Timbuktu Chamber of Commerce</title>
 
-    <meta name="description" content="Chamber of Commerce Directory - WDD 231 - Victor Aderibigbe">
+    <meta name="description"
+        content="Timbuktu Chamber of Commerce: Empowering local businesses with networking, resources, and advocacy to drive economic growth and innovation in Mali. Join us to thrive!">
     <meta name="author" content="Victor Aderibigbe">
-    <meta property="og:title" content="WDD 231 | Chamber of Commerce Directory">
-    <meta property="og:description" content="Chamber of Commerce Directory - WDD 231 - Victor Aderibigbe">
-    <meta property="og:image" content="https://res.cloudinary.com/drrkn43xk/image/upload/v1748263750/logo_okdnzf.png">
+    <meta property="og:title" content="Timbuktu Chamber of Commerce">
+    <meta property="og:description"
+        content="Timbuktu Chamber of Commerce: Empowering local businesses with networking, resources, and advocacy to drive economic growth and innovation in Mali. Join us to thrive!">
+    <meta property="og:image"
+        content="https://res.cloudinary.com/drrkn43xk/image/upload/v1748448193/timbuktu_logo_kpkxty.png">
     <meta property="og:url" content="https://victoraderibigbe.github.io/wdd231/chamber">
 
     <link rel="icon" href="favicon.ico">
@@ -31,13 +34,49 @@
 
 <body>
 
-    <head></head>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/timbuktu_logo.png" alt="Timbuktu Logo" width="100">
+                <div>
+                    <span>Timbuktu</span>
+                    <span>Chamber of Commerce</span>
+                </div>
+            </div>
+            <div class="navigation-container">
+                <div class="large-screen-navigation">
+                    <a href="#">Home</a>
+                    <a href="#">Directory</a>
+                    <a href="#">Join</a>
+                    <a href="#">Discover</a>
+                </div>
+                <img src="images/eclipse.png" alt="Eclipse icon">
+                <button id="menu"></button>
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="/chamber/directory.html">Directory</a>
+            <a href="#">Join</a>
+            <a href="#">Discover</a>
+        </nav>
+    </header>
 
     <main>
-        <h1>Chamber of Commerce</h1>
+        <div class="menu">
+            <button id="grid" class="active">⏹️ Grid</button>
+            <button id="list">📄 List</button>
+        </div>
+
+        <article class="grid"></article>
     </main>
 
-    <footer></footer>
+    <footer>
+        <p>&copy;<span id="currentYear"></span> ⭐ Victor T. Aderibigbe ⭐ <span class="country-with-flag">Nigeria <img
+                    src="../images/nigeria-flag.webp" alt="Nigeria" width="40"></span></p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
 </body>
 
 </html>

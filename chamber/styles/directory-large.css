@@ -1,0 +1,42 @@
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  .large-screen-navigation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.8rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .navigation-container {
+    gap: 1rem;
+  }
+
+  .large-screen-navigation a {
+    color: var(--primary-color);
+    transition: color 0.2s ease;
+  }
+
+  .large-screen-navigation a:hover {
+    color: var(--accent1-color);
+    text-decoration: underline;
+  }
+
+  main article {
+    padding: 2rem 3rem;
+  }
+}
