@@ -193,6 +193,10 @@ main article {
   padding: 1rem;
 }
 
+main article.list {
+  max-width: 44rem;
+}
+
 .card {
   background-color: var(--accent2-color);
   border-radius: 0.5rem;
@@ -209,12 +213,6 @@ main article.list .card {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-}
-
-.card .logo-name-container {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .card .logo-container {

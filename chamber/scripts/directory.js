@@ -75,24 +75,9 @@ const displayList = async () => {
     const card = document.createElement("section");
     card.classList.add("card");
 
-    const logoNameContainer = document.createElement("div");
-    logoNameContainer.classList.add("logo-name-container");
-
-    const logoContainer = document.createElement("div");
-    logoContainer.classList.add("logo-container");
-
-    const logo = document.createElement("img");
-    logo.src = member.image;
-    logo.alt = `${member.name} logo`;
-    logo.width = "100";
-    logoContainer.appendChild(logo);
-    logoNameContainer.appendChild(logoContainer);
-
     const name = document.createElement("h2");
     name.textContent = member.name;
-    logoNameContainer.appendChild(name);
-
-    card.appendChild(logoNameContainer);
+    card.appendChild(name);
 
     const website = document.createElement("a");
     website.href = member.website;
