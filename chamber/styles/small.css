@@ -1,3 +1,5 @@
+/* General Styles */
+
 :root {
   --primary-color: #004a6b;
   --secondary-color: #5c8b39;
@@ -22,11 +24,11 @@ body {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 h1,
@@ -46,7 +48,7 @@ a {
 }
 
 p {
-  line-height: 1.2rem;
+  line-height: 1.5rem;
   color: var(--dark-color);
 }
 
@@ -60,15 +62,18 @@ figure {
   font-size: 0.8rem;
 }
 
-button {
+button,
+.button {
   padding: 0.5rem 0.8rem;
   border-radius: 0.5rem;
   border: none;
   font-weight: 600;
   font-size: 0.8rem;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: ease-in-out;
 }
+
+/* Header styles */
 
 header {
   padding: 0.5rem;
@@ -159,9 +164,56 @@ header nav {
   display: flex;
 }
 
-main {
-  padding: 1rem 0;
+/* Main content styles */
+
+/* Home page styles */
+.hero {
+  position: relative;
+  background-color: var(--accent2-color);
 }
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.hero .hero-content {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero .hero-content h1 {
+  color: var(--primary-color);
+}
+
+.hero .hero-content p {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--accent2-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.hero .hero-content .button {
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+  font-size: 1rem;
+  width: fit-content;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.hero .hero-content .button:hover {
+  background-color: var(--accent1-color);
+  color: var(--accent2-color);
+}
+
+/* Directory page styles */
 
 main .menu {
   background-color: var(--dark-color);

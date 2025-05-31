@@ -1,6 +1,6 @@
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   h2 {
@@ -36,7 +36,20 @@
     text-decoration: underline;
   }
 
+  .hero .hero-content {
+    top: 0;
+    padding: 2.5rem;
+  }
+
   main article {
     padding: 2rem 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero .hero-content {
+    top: 5%;
+    padding: 2.5rem 5rem;
+    max-width: 70%;
   }
 }
