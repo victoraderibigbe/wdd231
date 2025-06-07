@@ -213,6 +213,64 @@ header nav {
   color: var(--accent2-color);
 }
 
+.weather-section {
+  margin: 1rem;
+}
+
+.weather-section .section-heading {
+  margin: 0.5rem auto;
+  color: var(--primary-color);
+}
+
+.weather-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.weather-cards .weather-card {
+  background-color: var(--accent2-color);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.weather-cards .weather-card h2 {
+  padding: 1rem;
+  background-color: var(--primary-color);
+}
+
+.weather-cards .weather-card .card-body {
+  padding: 1rem;
+}
+
+.business-cards {
+  display: grid;
+  margin: 2rem 1rem;
+  gap: 1rem;
+}
+
+.business-card {
+  border-radius: 0.5rem;
+  background-color: var(--accent2-color);
+}
+
+.business-card-header {
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--dark-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.business-card-header p {
+  font-size: 1.2rem;
+}
+
+.business-card-body {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 /* Directory page styles */
 
 main .menu {
@@ -294,29 +352,33 @@ main article.list .card {
 
 footer {
   background-color: var(--primary-color);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
+  display: grid;
+  padding: 2rem 1rem;
+  gap: 1rem;
 }
 
-footer p {
-  margin: 0.5rem auto;
-  line-height: 1.5rem;
-}
-
-footer p:first-child {
+footer p,
+b {
   color: var(--accent2-color);
-  display: flex;
-  flex-wrap: wrap;
+  line-height: 1.7rem;
 }
 
-footer .country-with-flag {
+footer .social-icons {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 1rem;
 }
 
-footer p:last-child {
-  color: var(--accent1-color);
+footer .social-icons a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 100%;
+  background-color: var(--accent2-color);
+}
+
+footer .social-icons a:hover img {
+  transform: scale(120%);
+  transition: 0.3s ease;
 }
