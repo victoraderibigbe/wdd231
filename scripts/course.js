@@ -67,7 +67,8 @@ const courses = [
   },
 ];
 
-const displayCourses = document.getElementById("displayCourses");
+const displayCourses = document.querySelector("#displayCourses");
+const courseDetails = document.querySelector("#course-details");
 
 const getTotal = (total, credit) => {
   return total + credit;
@@ -100,6 +101,10 @@ if (courses.length <= 0) {
         buttonElement.classList.add("incomplete");
       }
 
+      buttonElement.addEventListener("click", () => {
+        displayCourseDetails(course);
+      });
+
       courseCardsContainer.appendChild(buttonElement);
     });
 
@@ -127,6 +132,10 @@ if (courses.length <= 0) {
       } else {
         buttonElement.classList.add("incomplete");
       }
+
+      buttonElement.addEventListener("click", () => {
+        displayCourseDetails(course);
+      });
 
       courseCardsContainer.appendChild(buttonElement);
     });
@@ -160,6 +169,10 @@ if (courses.length <= 0) {
         buttonElement.classList.add("incomplete");
       }
 
+      buttonElement.addEventListener("click", () => {
+        displayCourseDetails(course);
+      });
+
       courseCardsContainer.appendChild(buttonElement);
     });
 
@@ -192,9 +205,31 @@ if (courses.length <= 0) {
         buttonElement.classList.add("incomplete");
       }
 
+      buttonElement.addEventListener("click", () => {
+        displayCourseDetails(course);
+      });
+
       courseCardsContainer.appendChild(buttonElement);
     });
 
     displayCourses.appendChild(courseCardsContainer);
   });
 }
+
+const displayCourseDetails = (course) => {
+  courseDetails.innerHTML = "";
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(", ")}</p>
+  `;
+  courseDetails.showModal();
+
+  document.getElementById("closeModal").addEventListener("click", () => {
+    courseDetails.close();
+  });
+};

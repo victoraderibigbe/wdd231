@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory | Timbuktu Chamber of Commerce</title>
+    <title>Thank you | Timbuktu Chamber of Commerce</title>
 
     <meta name="description"
         content="Empowering local businesses with networking, resources, and advocacy to drive economic growth and innovation in Mali. Join us to thrive!">
@@ -29,11 +29,10 @@
 
     <script src="../scripts/date.js" defer></script>
     <script src="../scripts/navigation.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
-
     <header>
         <div class="header-container">
             <div class="logo-container">
@@ -45,9 +44,9 @@
             </div>
             <div class="navigation-container">
                 <div class="large-screen-navigation">
-                    <a href="/chamber/index.html">Home</a>
+                    <a href="/chamber">Home</a>
                     <a href="/chamber/directory.html">Directory</a>
-                    <a href="/chamber/join.html">Join</a>
+                    <a href="#">Join</a>
                     <a href="#">Discover</a>
                 </div>
                 <img src="images/eclipse.png" alt="Eclipse icon">
@@ -56,20 +55,54 @@
         </div>
 
         <nav class="navigation">
-            <a href="/chamber/index.html">Home</a>
+            <a href="/chamber">Home</a>
             <a href="/chamber/directory.html">Directory</a>
-            <a href="#">Join</a>
+            <a href="/chamber/join.html">Join</a>
             <a href="#">Discover</a>
         </nav>
     </header>
 
     <main>
-        <div class="menu">
-            <button id="grid" class="active">⏹️ Grid</button>
-            <button id="list">📄 List</button>
-        </div>
+        <div class="container">
+            <div class="thank-you-section">
+                <div class="checkmark"></div>
+                <h1>Thank You!</h1>
+                <p class="subtitle">Your membership application has been successfully submitted.</p>
+                <p>We appreciate your interest in joining our Chamber of Commerce community.</p>
+            </div>
 
-        <article class="grid"></article>
+            <div class="submission-details">
+                <h2>Application Summary</h2>
+                <div class="details-grid" id="submissionDetails">
+                    <!-- Details will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h2>What Happens Next?</h2>
+                <ul class="steps-list">
+                    <li>
+                        <strong>Application Review</strong><br>
+                        Our membership committee will review your application within 3-5 business days.
+                    </li>
+                    <li>
+                        <strong>Verification Process</strong><br>
+                        We may contact you to verify information and discuss membership benefits.
+                    </li>
+                    <li>
+                        <strong>Welcome Package</strong><br>
+                        Upon approval, you'll receive a welcome package with member resources and benefits.
+                    </li>
+                    <li>
+                        <strong>Orientation</strong><br>
+                        You'll be invited to our monthly new member orientation and networking event.
+                    </li>
+                </ul>
+                <div style="text-align: center;">
+                    <a href="join.html" class="back-button">Submit Another Application</a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -81,20 +114,20 @@
             <p>(223) 555-2300</p>
         </div>
         <div class="social-icons">
-            <a href="#">
+            <a href="https://www.youtube.com/" target="_blank">
                 <img src="images/youtube.png" alt="Youtube icon">
             </a>
-            <a href="#">
+            <a href="https://x.com/bytes_nova" target="_blank">
                 <img src="images/twitter.png" alt="Twitter icon">
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/vee-jay" target="_blank">
                 <img src="images/linkedin.png" alt="Linkedin icon">
             </a>
         </div>
         <div class="site-info">
             <p>WDD231 Class Project</p>
             <p>Victor Aderibigbe</p>
-            <p>&copy;<span id="currentYear"></span>Timbuktu Chamber of Commerce</p>
+            <p>&copy; <span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
             <p>Last Modification: <span id="lastModified"></span></p>
         </div>
     </footer>
