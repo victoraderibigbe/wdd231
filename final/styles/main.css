@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   line-height: 1.6;
   color: #2e3440;
   background-color: #eceff4;
@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -79,7 +79,7 @@ a:hover {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
@@ -126,6 +126,11 @@ a:hover {
   color: #eceff4;
 }
 
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
 /* Header and Navigation */
 .navbar {
   background-color: white;
@@ -156,7 +161,7 @@ a:hover {
 }
 
 .nav-link {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 500;
   color: #2e3440;
   padding: 0.5rem 0;
@@ -192,6 +197,19 @@ a:hover {
   background-color: #2e3440;
   margin: 3px 0;
   transition: 0.3s;
+}
+
+/* Layout Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section-white {
+  background-color: white;
+}
+
+.section-gray {
+  background-color: #eceff4;
 }
 
 /* Hero Section */
@@ -244,6 +262,79 @@ a:hover {
 .hero-decoration svg {
   width: 100%;
   height: 100%;
+}
+
+/* Grid Layouts */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Card Components */
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(46, 52, 64, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(46, 52, 64, 0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  color: #2e3440;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  color: #5e81ac;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.card-text {
+  color: #2e3440;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Featured Categories */
@@ -371,6 +462,16 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.artist-details {
+  font-size: 0.8rem;
+  color: #5e81ac;
+  margin-bottom: 1rem;
+}
+
+.artist-details p {
+  margin-bottom: 0.25rem;
+}
+
 .artist-actions {
   display: flex;
   justify-content: space-between;
@@ -440,7 +541,7 @@ a:hover {
   font-size: 2.5rem;
   font-weight: bold;
   color: #5e81ac;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 .stat-label {
@@ -623,6 +724,87 @@ footer {
   padding: 1.5rem;
 }
 
+.modal-artist-info {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.modal-artist-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.modal-artist-details h3 {
+  margin-bottom: 0.5rem;
+}
+
+.modal-medium {
+  color: #5e81ac;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.modal-bio {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.modal-contact p {
+  margin-bottom: 0.5rem;
+}
+
+.modal-specialties {
+  margin-top: 1rem;
+}
+
+.specialty-tag {
+  display: inline-block;
+  background: #eceff4;
+  color: #2e3440;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+}
+
+.modal-artworks {
+  margin-top: 2rem;
+}
+
+.artworks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.artwork-item {
+  text-align: center;
+}
+
+.artwork-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.artwork-item h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.artwork-item p {
+  font-size: 0.8rem;
+  color: #5e81ac;
+  margin: 0;
+}
+
 /* Gallery Specific Styles */
 .gallery-header {
   padding: 3rem 0;
@@ -663,7 +845,7 @@ footer {
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 0.9rem;
 }
 
@@ -860,7 +1042,7 @@ footer {
   margin-bottom: 0.5rem;
   font-weight: 600;
   color: #2e3440;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 .form-group input,
@@ -871,7 +1053,7 @@ footer {
   border: 2px solid #e5e9f0;
   border-radius: 5px;
   font-size: 1rem;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   transition: border-color 0.3s ease;
 }
 
@@ -893,7 +1075,7 @@ footer {
   color: #bf616a;
   font-size: 0.9rem;
   margin-top: 0.25rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 .checkbox-group {
@@ -1019,7 +1201,7 @@ footer {
   font-weight: 600;
   color: #2e3440;
   min-width: 120px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 .data-value {
@@ -1180,6 +1362,17 @@ footer {
     padding: 1rem;
   }
 
+  .modal-artist-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-artist-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
   /* Form */
   .confirmation-content {
     padding: 2rem 1rem;
@@ -1221,6 +1414,44 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* Focus Styles for Better Accessibility */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a:focus {
+  outline: 3px solid #d08770;
+  outline-offset: 2px;
+}
+
+.nav-link:focus {
+  outline: 2px solid #d08770;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.btn:focus {
+  outline: 3px solid #d08770;
+  outline-offset: 2px;
+}
+
+/* Skip Link for Screen Readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #2e3440;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 3000;
+}
+
+.skip-link:focus {
+  top: 6px;
 }
 
 /* Print Styles */
@@ -1281,42 +1512,4 @@ footer {
   .category-card {
     border: 2px solid #2e3440;
   }
-}
-
-/* Focus Styles for Better Accessibility */
-button:focus,
-input:focus,
-select:focus,
-textarea:focus,
-a:focus {
-  outline: 3px solid #d08770;
-  outline-offset: 2px;
-}
-
-.nav-link:focus {
-  outline: 2px solid #d08770;
-  outline-offset: 4px;
-  border-radius: 4px;
-}
-
-.btn:focus {
-  outline: 3px solid #d08770;
-  outline-offset: 2px;
-}
-
-/* Skip Link for Screen Readers */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #2e3440;
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  border-radius: 4px;
-  z-index: 3000;
-}
-
-.skip-link:focus {
-  top: 6px;
 }
