@@ -263,6 +263,13 @@ footer .country-with-flag {
   gap: 0.5rem;
 }
 
+footer p:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 footer p:last-child {
   color: var(--accent1-color);
 }
