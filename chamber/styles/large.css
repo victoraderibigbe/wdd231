@@ -41,6 +41,28 @@
     padding: 2.5rem;
   }
 
+  .weather-section,
+  .business-cards {
+    margin: 1rem 2rem;
+  }
+
+  .weather-cards {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .weather-cards .events {
+    grid-column: 1/3;
+  }
+
+  .business-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .business-card-body .card-image img {
+    width: 50px;
+  }
+
   main article {
     padding: 2rem 3rem;
   }
@@ -66,6 +88,18 @@
     max-width: 70%;
   }
 
+  .weather-cards {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .weather-cards .events {
+    grid-column: 1/1;
+  }
+
+  .business-card-body .card-image img {
+    width: 100px;
+  }
+
   footer {
     padding: 3rem 5rem;
   }
@@ -76,5 +110,12 @@
 
   footer .social-icons a {
     padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .weather-section,
+  .business-cards {
+    margin: 2rem 5rem;
   }
 }
