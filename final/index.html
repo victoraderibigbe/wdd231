@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CanvasNova - Discover talented local artists and their creative work. Explore curated galleries of digital art, paintings, photography, and sculpture from emerging artists in your community.">
+    <meta name="author" content="Victor Aderibigbe">
+    <meta name="keywords"
+        content="local artists, art gallery, emerging artists, digital art, paintings, photography, sculpture">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CanvasNova - Discover Local Artists">
+    <meta property="og:description"
+        content="Explore curated galleries of talented local artists and their creative work.">
+    <meta property="og:image" content="https://victoraderibigbe.github.io/wdd231/final/images/acrylic-painting.webp">
+    <meta property="og:url" content="https://victoraderibigbe.github.io/wdd231/final">
+    <meta property="og:site_name" content="CanvasNova">
+
+    <title>CanvasNova - Discover Local Artists & Their Stories</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="../scripts/date.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/canvasnova-logo.png" alt="CanvasNova Logo" width="50">
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="sr-only">CanvasNova - Discover Local Artists</h1>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Discover Local Artists & Their Stories</h2>
+                <p>Explore a curated collection of emerging talent from your community. From digital masterpieces to
+                    traditional paintings, discover the artists who are shaping tomorrow's creative landscape.</p>
+                <div class="hero-buttons">
+                    <a href="gallery.html" class="btn btn-primary">Explore Gallery</a>
+                    <a href="contact.html" class="btn btn-secondary">Submit Your Art</a>
+                </div>
+            </div>
+            <div class="hero-decoration">
+                <svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,100 Q300,50 600,100 T1200,100 L1200,300 L0,300 Z" fill="#5E81AC" opacity="0.1" />
+                    <path d="M0,150 Q400,100 800,150 T1200,150 L1200,300 L0,300 Z" fill="#D08770" opacity="0.1" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="featured-categories">
+            <div class="container">
+                <h2>Featured Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="digital">
+                        <div class="category-image">
+                            <img src="images/digital-art.webp" alt="Digital Art" loading="lazy">
+                        </div>
+                        <h3>Digital Art</h3>
+                        <p>Modern digital creations and illustrations</p>
+                    </div>
+                    <div class="category-card" data-category="painting">
+                        <div class="category-image">
+                            <img src="images/acrylic-painting.webp" alt="Acrylic Painting" loading="lazy">
+                        </div>
+                        <h3>Acrylic Painting</h3>
+                        <p>Vibrant acrylic paintings and mixed media</p>
+                    </div>
+                    <div class="category-card" data-category="photography">
+                        <div class="category-image">
+                            <img src="images/photography.webp" alt="Photography" loading="lazy">
+                        </div>
+                        <h3>Photography</h3>
+                        <p>Stunning photography and visual storytelling</p>
+                    </div>
+                    <div class="category-card" data-category="sculpture">
+                        <div class="category-image">
+                            <img src="images/sculpture.webp" alt="Sculpture" loading="lazy">
+                        </div>
+                        <h3>Sculpture</h3>
+                        <p>Three-dimensional art and installations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Artists -->
+        <section class="featured-artists">
+            <div class="container">
+                <h2>Featured Artists</h2>
+                <div class="artists-grid" id="featured-artists-grid">
+                    <!-- Artists will be loaded dynamically -->
+                </div>
+                <div class="view-all">
+                    <a href="gallery.html" class="btn btn-outline">View All Artists</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="container">
+                <h2>About CanvasNova</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>CanvasNova is more than just an art gallery—it's a vibrant community where emerging local
+                            artists can showcase their talent and connect with art enthusiasts, collectors, and fellow
+                            creators.</p>
+                        <p>Our mission is to bridge the gap between talented local artists seeking exposure and art
+                            lovers looking to discover fresh, authentic creativity in their community. We believe that
+                            every artist has a unique story to tell, and every piece of art has the power to inspire,
+                            provoke thought, and bring beauty into the world.</p>
+                        <p>Whether you're an art collector searching for your next acquisition, an interior designer
+                            seeking the perfect piece, or simply someone who appreciates creativity, CanvasNova is your
+                            gateway to discovering the artistic treasures in your local community.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="150">0</span>
+                            <span class="stat-label">Local Artists</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="500">0</span>
+                            <span class="stat-label">Artworks</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="25">0</span>
+                            <span class="stat-label">Art Categories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-decoration">
+                <svg viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,50 Q300,10 600,50 T1200,50" stroke="#2E3440" stroke-width="2" fill="none"
+                        opacity="0.3" />
+                    <path d="M0,70 Q400,30 800,70 T1200,70" stroke="#5E81AC" stroke-width="2" fill="none"
+                        opacity="0.3" />
+                    <path d="M0,30 Q200,70 400,30 T800,30 Q1000,70 1200,30" stroke="#D08770" stroke-width="2"
+                        fill="none" opacity="0.3" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Discover Amazing Art?</h2>
+                <p>Join our community of art lovers and discover the incredible talent in your local area.</p>
+                <div class="cta-buttons">
+                    <a href="gallery.html" class="btn btn-primary">Explore Gallery</a>
+                    <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CanvasNova</h3>
+                    <p>Discovering and celebrating local artistic talent in our community.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <nav class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="gallery.html?filter=digital">Digital Art</a></li>
+                        <li><a href="gallery.html?filter=painting">Acrylic Painting</a></li>
+                        <li><a href="gallery.html?filter=photography">Photography</a></li>
+                        <li><a href="gallery.html?filter=sculpture">Sculpture</a></li>
+                    </ul>
+                </nav>
+                <section class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Email: <a href="mailto:aderibigbetoluwani5@gmail.com">aderibigbetoluwani5@gmail.com</a></p>
+                    <p>Phone: +2349032317059</p>
+                </section>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> CanvasNova. All rights reserved.</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Artist Details -->
+    <div id="artist-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Artist Details</h3>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>
