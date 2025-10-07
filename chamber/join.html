@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Timbuktu Chamber of Commerce</title>
+
+    <meta name="description"
+        content="Empowering local businesses with networking, resources, and advocacy to drive economic growth and innovation in Mali. Join us to thrive!">
+    <meta name="author" content="Victor Aderibigbe">
+    <meta property="og:title" content="Timbuktu Chamber of Commerce">
+    <meta property="og:description"
+        content="Empowering local businesses with networking, resources, and advocacy to drive economic growth and innovation in Mali. Join us to thrive!">
+    <meta property="og:image"
+        content="https://res.cloudinary.com/drrkn43xk/image/upload/v1748448193/timbuktu_logo_kpkxty.png">
+    <meta property="og:url" content="https://victoraderibigbe.github.io/wdd231/chamber">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="../scripts/date.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/timbuktu_logo.png" alt="Timbuktu Logo" width="100">
+                <div>
+                    <span>Timbuktu</span>
+                    <span>Chamber of Commerce</span>
+                </div>
+            </div>
+            <div class="navigation-container">
+                <div class="large-screen-navigation">
+                    <a href="index.html">Home</a>
+                    <a href="directory.html">Directory</a>
+                    <a href="join.html">Join</a>
+                    <a href="#">Discover</a>
+                </div>
+                <img src="images/eclipse.png" alt="Eclipse icon">
+                <button id="menu"></button>
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="#">Discover</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="main-content">
+                <div class="form-section">
+                    <h1>Join Our Chamber of Commerce</h1>
+                    <form id="membershipForm" method="get" action="thankyou.html">
+                        <div class="form-grid">
+                            <label for="firstName">
+                                First Name *
+                                <input type="text" id="firstName" name="firstName" title="Enter your first name"
+                                    autocomplete="given-name" required>
+                                <span class="error-message" id="firstNameError"></span>
+                            </label>
+
+                            <label for="lastName">
+                                Last Name *
+                                <input type="text" id="lastName" name="lastName" title="Enter your last name"
+                                    autocomplete="family-name" required>
+                                <span class="error-message" id="lastNameError"></span>
+                            </label>
+
+                            <label for="orgTitle" class="full-width">
+                                Organizational Title
+                                <input type="text" id="orgTitle" name="orgTitle"
+                                    title="Enter your title within the organization" autocomplete="organization-title"
+                                    pattern="[A-Za-z\s\-]{7,}" placeholder="e.g., Chief Executive Officer">
+                                <span class="error-message" id="orgTitleError"></span>
+                            </label>
+
+                            <label for="email">
+                                Email Address *
+                                <input type="email" id="email" name="email" title="Enter your email address"
+                                    autocomplete="email" placeholder="example@company.com" required>
+                                <span class="error-message" id="emailError"></span>
+                            </label>
+
+                            <label for="phone">
+                                Mobile Phone *
+                                <input type="tel" id="phone" name="phone" title="Enter your mobile phone number"
+                                    autocomplete="tel" required>
+                                <span class="error-message" id="phoneError"></span>
+                            </label>
+
+                            <label for="businessName" class="full-width">
+                                Business/Organization Name *
+                                <input type="text" id="businessName" name="businessName"
+                                    title="Enter your business or organization name" autocomplete="organization"
+                                    required>
+                                <span class="error-message" id="businessNameError"></span>
+                            </label>
+
+                            <label for="membershipLevel" class="full-width">
+                                Membership Level
+                                <select id="membershipLevel" name="membershipLevel"
+                                    title="Select your preferred membership level">
+                                    <option value="">Select a membership level</option>
+                                    <option value="np">NP Membership (Non-Profit - Free)</option>
+                                    <option value="bronze">Bronze Membership</option>
+                                    <option value="silver">Silver Membership</option>
+                                    <option value="gold">Gold Membership</option>
+                                </select>
+                            </label>
+
+                            <label for="businessDescription" class="full-width">
+                                Business/Organization Description
+                                <textarea id="businessDescription" name="businessDescription"
+                                    title="Describe your business or organization"
+                                    placeholder="Tell us about your business or organization..."></textarea>
+                            </label>
+
+                            <input type="hidden" id="timestamp" name="timestamp">
+
+                            <div class="full-width">
+                                <button type="submit" class="submit-btn">Submit Application</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="membership-levels">
+                    <div class="membership-card" onclick="openModal('npModal')">
+                        <h3>NP Membership</h3>
+                        <div class="price">Free</div>
+                        <p>Perfect for non-profit organizations</p>
+                        <a href="#" class="info-link">Learn More</a>
+                    </div>
+
+                    <div class="membership-card" onclick="openModal('bronzeModal')">
+                        <h3>Bronze Membership</h3>
+                        <div class="price">$99/year</div>
+                        <p>Great for small businesses</p>
+                        <a href="#" class="info-link">Learn More</a>
+                    </div>
+
+                    <div class="membership-card" onclick="openModal('silverModal')">
+                        <h3>Silver Membership</h3>
+                        <div class="price">$199/year</div>
+                        <p>Enhanced benefits and networking</p>
+                        <a href="#" class="info-link">Learn More</a>
+                    </div>
+
+                    <div class="membership-card" onclick="openModal('goldModal')">
+                        <h3>Gold Membership</h3>
+                        <div class="price">$299/year</div>
+                        <p>Premium benefits and spotlight</p>
+                        <a href="#" class="info-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div id="npModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('npModal')">&times;</span>
+                <h2>NP Membership Benefits</h2>
+                <ul class="benefits">
+                    <li>Free membership for qualified non-profits</li>
+                    <li>Access to networking events</li>
+                    <li>Monthly newsletter</li>
+                    <li>Business directory listing</li>
+                    <li>Educational workshops</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="bronzeModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <ul class="benefits">
+                    <li>All NP membership benefits</li>
+                    <li>Priority event registration</li>
+                    <li>Quarterly business spotlights</li>
+                    <li>Discounted advertising rates</li>
+                    <li>Member-to-member discounts</li>
+                    <li>Business referral services</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="silverModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('silverModal')">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <ul class="benefits">
+                    <li>All Bronze membership benefits</li>
+                    <li>Monthly business spotlights</li>
+                    <li>Free event tickets (up to 2 per month)</li>
+                    <li>Enhanced directory listing with logo</li>
+                    <li>Social media promotion</li>
+                    <li>Exclusive member mixers</li>
+                    <li>Business consultation services</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('goldModal')">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <ul class="benefits">
+                    <li>All Silver membership benefits</li>
+                    <li>Weekly business spotlights</li>
+                    <li>Unlimited free event tickets</li>
+                    <li>Premium directory placement</li>
+                    <li>Homepage banner advertising</li>
+                    <li>VIP networking events</li>
+                    <li>Dedicated account manager</li>
+                    <li>Annual awards eligibility</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <b>Timbuktu Chamber of Commerce</b>
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+            <p>info@timbuktucc.org</p>
+            <p>(223) 555-2300</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="images/youtube.png" alt="Youtube icon">
+            </a>
+            <a href="https://x.com/bytes_nova" target="_blank">
+                <img src="images/twitter.png" alt="Twitter icon">
+            </a>
+            <a href="https://www.linkedin.com/in/vee-jay" target="_blank">
+                <img src="images/linkedin.png" alt="Linkedin icon">
+            </a>
+        </div>
+        <div class="site-info">
+            <p>WDD231 Class Project</p>
+            <p>Victor Aderibigbe</p>
+            <p>&copy; <span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

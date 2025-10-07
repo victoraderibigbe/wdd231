@@ -67,6 +67,12 @@
     padding: 2rem 3rem;
   }
 
+  /* Join Page */
+
+  .main-content {
+    grid-template-columns: 2fr 1fr;
+  }
+
   /* Footer */
 
   footer {
